@@ -1,1 +1,32 @@
-<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MyClinic100 Jordan</title><script src="https://cdn.tailwindcss.com"></script></head><body style="background:#0a1220;color:white;font-family:sans-serif"><div style="background:#0f1c33;padding:12px;display:flex;justify-content:space-between"><span>👨‍⚕️👩‍⚕️</span><b>MyClinic100 🇯🇴</b></div><div style="padding:15px;text-align:center"><h2 style="font-weight:900;font-size:22px">صندوق الوارد الرسمي - واتساب</h2><div style="background:#16a34a;display:inline-block;padding:4px 12px;border-radius:20px;font-size:12px;margin-top:8px">✅ قناة واتساب الرسمية - الأردن</div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:15px"><div style="background:#121e35;padding:10px;border-radius:10px"><div style="font-size:28px;font-weight:900">142</div><div style="font-size:10px">إجمالي المحادثات</div></div><div style="background:#121e35;padding:10px;border-radius:10px"><div style="font-size:28px;font-weight:900">3</div><div style="font-size:10px">دقائق متوسط الرد</div></div><div style="background:#121e35;padding:10px;border-radius:10px"><div style="font-size:28px;font-weight:900">98</div><div style="font-size:10px">رضا 96%</div></div></div><div style="display:grid;grid-template-columns:2fr 1fr;gap:8px;margin-top:15px;text-align:right"><div style="background:#121e35;padding:10px;border-radius:10px"><b>Ahmed - عمّان</b><div style="margin-top:10px;background:#1f2937;padding:8px;border-radius:8px;font-size:13px">السلام عليكم، نتيجة الفحص؟</div><div style="margin-top:6px;background:#16a34a;padding:8px;border-radius:8px;font-size:13px">وعليكم السلام، سيتم الإرسال PDF</div></div><div style="background:#121e35;padding:10px;border-radius:10px;font-size:12px"><b>عيادة عمّان الطبية</b><div style="font-size:10px;color:#aaa">عمّان الشميساني 🇯🇴</div><div style="margin-top:10px">💬 المحادثات 12<br>🏥 العيادات<br>📊 التقارير</div><div style="margin-top:10px;background:#0a1220;padding:8px;border-radius:8px;text-align:center">📍<br>Amman<br>عمّان<br><span style="font-size:8px">الشميساني - الأردن</span></div></div></div></div></body></html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MyClinic100 الاردن</title>
+<style>body{margin:0;font-family:system-ui;background:#f1f5f9} .header{background:#0a3d62;color:#fff;padding:18px;text-align:center} .card{background:#fff;margin:12px;padding:16px;border-radius:12px} select,input{width:100%;padding:12px;border-radius:8px;border:1px solid #ccc;margin-top:8px} .btn{background:#0a3d62;color:#fff;padding:12px;border-radius:8px;border:0;width:100%;margin-top:10px} iframe{width:100%;height:300px;border:0;border-radius:12px;margin-top:10px}</style>
+</head>
+<body>
+<div class="header"><h2>🇯🇴 MyClinic100 - الأردن</h2><p>لوحة تحكم العيادة</p></div>
+<div class="card">
+<label>📍 اختر مدينتك:</label>
+<select id="city" onchange="updateMap()">
+<option value="Amman, Jordan">عمان</option>
+<option value="Zarqa, Jordan">الزرقاء</option>
+<option value="Irbid, Jordan">اربد</option>
+<option value="Aqaba, Jordan">العقبة</option>
+<option value="Salt, Jordan">السلط</option>
+<option value="Madaba, Jordan">مادبا</option>
+<option value="Jerash, Jordan">جرش</option>
+<option value="Ajloun, Jordan">عجلون</option>
+<option value="Karak, Jordan">الكرك</option>
+<option value="Maan, Jordan">معان</option>
+<option value="Mafraq, Jordan">المفرق</option>
+</select>
+<input id="address" type="text" placeholder="عنوان العيادة بالضبط" oninput="updateMap()">
+<button class="btn" onclick="updateMap()">تحديث الخريطة</button>
+<iframe id="map" src="https://maps.google.com/maps?q=Amman,Jordan&z=12&output=embed"></iframe>
+</div>
+<script>function updateMap(){var city=document.getElementById('city').value;var addr=document.getElementById('address').value;var q=addr?addr+', '+city:city;document.getElementById('map').src='https://maps.google.com/maps?q='+encodeURIComponent(q)+'&z=14&output=embed'}</script>
+</body>
+</html>
